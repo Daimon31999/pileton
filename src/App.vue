@@ -30,7 +30,7 @@ export default {
   },
 }
 </script>
-
+//
 <style>
 #app {
   font-family: 'Helvetica Neue';
