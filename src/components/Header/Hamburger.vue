@@ -5,7 +5,7 @@
       :class="{ 'is-active': isActive }"
     >
       <div class="hamburger-box">
-        <div class="hamburger-inner"></div>
+        <div class="hamburger-inner "></div>
       </div>
     </div>
   </div>
@@ -60,13 +60,27 @@ export default {
 .hamburger-inner::after {
   width: 30px;
   height: 4px;
-  background-color: #000;
+  background: #2d8df0;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
+
+/* .hamburger-inner.bg-white,
+.hamburger-inner.bg-white::before,
+.hamburger-inner.bg-white::after {
+  width: 30px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+} */
+
 .hamburger-inner::before,
 .hamburger-inner::after {
   content: '';

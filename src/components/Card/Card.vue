@@ -17,12 +17,14 @@
           <font-awesome-icon class="mr-2" :icon="['far', 'euro-sign']" />
           <span>{{ cost }}</span>
         </div>
+        <button
+          class="buy-ticket mb-2 bg-success w-full border rounded text-white mt-6
+        hover:bg-pileton-blue transition-colors duration-300 mx-auto
+        "
+        >
+          Buy ticket
+        </button>
       </div>
-      <button
-        class="buy-ticket mb-2 bg-success w-full border rounded text-white mt-6 "
-      >
-        Buy ticket
-      </button>
     </div>
     <div class="ticket-bottom mx-1 bg-white shadow-none"></div>
   </div>

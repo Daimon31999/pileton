@@ -1,7 +1,14 @@
 <template>
-  <header>
-    <nav class="flex items-center justify-between bg-white p-2">
-      <div class="block">
+  <header class="">
+    <div
+      class="overlay"
+      :class="hamburgerIsOpen ? 'hidden md:block' : 'hidden'"
+    ></div>
+
+    <nav
+      class="fixed top-0 z-50 w-full flex items-center justify-between bg-white p-2"
+    >
+      <div class="block z-50">
         <button
           v-on:click="toggleHamburger"
           class="flex items-center px-3 py-2 rounded focus:outline-none"
@@ -11,7 +18,7 @@
       </div>
       <img
         :src="logo"
-        :class="hamburgerIsOpen ? 'hidden' : 'block'"
+        :class="hamburgerIsOpen ? 'hidden lg:block' : 'block'"
         class="w-40 h-12 mr-6 ml-3 "
         alt="logo"
       />
@@ -61,7 +68,10 @@
           Категории
         </div>
       </div>
-      <div :class="hamburgerIsOpen ? 'hidden' : 'block'" class="nav-right">
+      <div
+        :class="hamburgerIsOpen ? 'hidden lg:block' : 'block'"
+        class="nav-right mr-6"
+      >
         <div class="search text-pileton-blue border border-pileton-blue ">
           <font-awesome-icon class="mr-4" :icon="['far', 'search']" />
           <span>Поиск</span>
@@ -69,30 +79,35 @@
       </div>
     </nav>
     <div
-      :class="hamburgerIsOpen ? 'toggle-mobile-nav ' : 'block'"
-      class="mobile-nav absolute top-4 bg-white text-black w-full h-full z-10 md:hidden px-8 py-4"
+      :class="
+        hamburgerIsOpen ? 'toggle-mobile-nav md:toggle-desktop-nav' : 'hidden'
+      "
+      class="mobile-nav fixed top-0 text-black w-full h-screen z-10 px-8 py-4
+      "
     >
-      <a href="#">Отмены и переносы</a>
-      <a href="#">Условия возврата</a>
-      <a href="#">Артисты</a>
-      <a href="#">Площадка</a>
-      <br />
-      <a href="#">О компании</a>
-      <a href="#">Контакты</a>
-      <a href="#">Кассы</a>
-      <a href="#">Реквизиты</a>
-      <a href="#">Способы оплаты</a>
-      <a href="#">Электронный билет</a>
-      <a href="#">Публичная оферта</a>
-      <a href="#">Политика конфиденциальности</a>
-      <br />
-      <a href="#">Подарочные сертификаты</a>
-      <a href="#">Промокоды</a>
-      <a href="#">Банеры</a>
-      <br />
-      <a href="#">Корпоративным клиентам</a>
-      <a href="#">ЛК органицатора</a>
-      <a href="#">Партнерская программа</a>
+      <div class="fixed top-0 left-0 bg-white md:w-84 pt-20 pb-24">
+        <a href="#">Отмены и переносы</a>
+        <a href="#">Условия возврата</a>
+        <a href="#">Артисты</a>
+        <a href="#">Площадка</a>
+        <br />
+        <a href="#">О компании</a>
+        <a href="#">Контакты</a>
+        <a href="#">Кассы</a>
+        <a href="#">Реквизиты</a>
+        <a href="#">Способы оплаты</a>
+        <a href="#">Электронный билет</a>
+        <a href="#">Публичная оферта</a>
+        <a href="#">Политика конфиденциальности</a>
+        <br />
+        <a href="#">Подарочные сертификаты</a>
+        <a href="#">Промокоды</a>
+        <a href="#">Банеры</a>
+        <br />
+        <a href="#">Корпоративным клиентам</a>
+        <a href="#">ЛК органицатора</a>
+        <a href="#">Партнерская программа</a>
+      </div>
     </div>
   </header>
 </template>
@@ -100,6 +115,7 @@
 <script>
 import Hamburger from '../Header/Hamburger.vue'
 import logo from '../../assets/img/logo.png'
+
 export default {
   components: { Hamburger },
   name: 'Header',
@@ -107,6 +123,12 @@ export default {
     hamburgerIsOpen: false,
     logo,
   }),
+  watch: {
+    // whenever active changes, this function will run
+    hamburgerIsOpen: function() {
+      document.body.style.overflow = this.hamburgerIsOpen ? 'hidden' : ''
+    },
+  },
   methods: {
     toggleHamburger: function() {
       this.hamburgerIsOpen = !this.hamburgerIsOpen
@@ -155,5 +177,21 @@ export default {
 
 .mobile-nav a {
   display: block;
+  @apply pl-6 text-pileton-blue my-2;
+}
+
+.mobile-nav a:hover {
+  @apply bg-green-200;
+}
+
+.overlay {
+  position: fixed;
+  transition-duration: 0s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 </style>

@@ -1,6 +1,13 @@
 <template>
-  <div class="carousel">
-    <carousel class="" :navigationEnabled="true" :autoplay="true" :perPage="1">
+  <div class="carousel mt-24">
+    <carousel
+      class=""
+      :navigationEnabled="true"
+      :autoplay="false"
+      :perPage="1"
+      :paginationActiveColor="'#2D8DF0'"
+      :paginationColor="'#4BF599'"
+    >
       <slide>
         <img class="slide-img" src="./../../assets/img/slide1.jpg" alt="" />
       </slide>
