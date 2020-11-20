@@ -49,7 +49,7 @@ button.VueCarousel-navigation-button {
   color: #2d8df0 !important;
   -webkit-text-fill-color: #2d8df0; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #4bf599;
+  -webkit-text-stroke-color: black;
 }
 
 .VueCarousel-navigation-prev {
