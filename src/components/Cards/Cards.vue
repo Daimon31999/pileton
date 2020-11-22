@@ -81,9 +81,6 @@ export default {
 </script>
 
 <style>
-.cards {
-}
-
 .cards .row {
   @apply flex flex-wrap flex-row w-full;
 }

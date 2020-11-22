@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="border border-pileton-blue w-64 mt-10 rounded-lg">
+    <div class="border border-gray-300 shadow-xl w-64 mt-10 rounded-lg">
       <div class="flex flex-col mx-5 font-bold ">
         <h1 class="m-auto mt-6">Фильтры</h1>
         <h1 class="mt-12 mb-4">Даты</h1>
@@ -12,7 +12,7 @@
           <SidebarCheckbox text="Ноябрь" name="november" />
         </ul>
         <button
-          class="border py-2 rounded my-4 font-bold uppercase text-xs text-pileton-blue border-pileton-blue hover:text-black hover:border-pileton-green transition duration-200"
+          class="border py-2 rounded my-4 font-bold uppercase text-xs text-pileton-blue border-pileton-blue hover:text-black hover:border-black transition duration-200"
         >
           Другие Дни
         </button>
@@ -33,7 +33,7 @@
           <SidebarCheckbox text="Елки" name="сhristmas-trees" />
         </ul>
         <button
-          class="border py-3 rounded-md border-none my-4 font-bold uppercase text-xs text-white hover:text-black hover:bg-pileton-green transition duration-200 bg-pileton-blue"
+          class="border py-3 rounded-md border-none my-4 font-bold uppercase text-xs text-white hover:text-white hover:bg-gray-700 transition duration-200 bg-pileton-blue"
         >
           Показать
         </button>

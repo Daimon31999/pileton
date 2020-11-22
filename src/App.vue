@@ -3,9 +3,9 @@
     <Header @openModal="onOpenModal" />
     <div :class="modalIsOpen ? 'hidden md:block' : 'block'">
       <Carousel />
-      <div class="flex mt-10 justify-between mx-8">
+      <div class="flex mt-10 justify-between mx-8 ">
         <Cards />
-        <SideBarFilter />
+        <SideBarFilter class="hidden md:block" />
       </div>
     </div>
   </div>

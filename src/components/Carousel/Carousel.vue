@@ -1,30 +1,59 @@
 <template>
   <div class="carousel mt-24">
-    <carousel
-      class=""
-      :navigationEnabled="true"
-      :autoplay="false"
-      :perPage="1"
-      :paginationActiveColor="'#2D8DF0'"
-      :paginationColor="'#4BF599'"
-    >
-      <slide>
-        <img class="slide-img" src="./../../assets/img/slide1.jpg" alt="" />
+    <carousel id="header-carousel" :autoplay="false" :perPage="1">
+      <slide class="flex justify-center">
+        <PiletonSlide
+          imgName="slide2.jpg"
+          when="28-29 Ноября"
+          where="Театр Geneza Art, 19:00"
+          priceStart="20"
+          priceEnd="50"
+        />
       </slide>
-      <slide>
-        <img class="slide-img" src="./../../assets/img/slide2.jpg" alt="" />
+      <slide class="flex justify-center">
+        <PiletonSlide
+          imgName="slide1.jpg"
+          when="28-29 Ноября"
+          where="Театр Geneza Art, 19:00"
+          priceStart="20"
+          priceEnd="50"
+        />
       </slide>
-      <slide>
-        <img class="slide-img" src="./../../assets/img/slide3.jpg" alt="" />
+      <slide class="flex justify-center">
+        <PiletonSlide
+          imgName="slide3.jpg"
+          when="28-29 Ноября"
+          where="Театр Geneza Art, 19:00"
+          priceStart="20"
+          priceEnd="50"
+        />
       </slide>
-      <slide>
-        <img class="slide-img" src="./../../assets/img/slide4.jpg" alt="" />
+      <slide class="flex justify-center">
+        <PiletonSlide
+          imgName="slide4.jpg"
+          when="28-29 Ноября"
+          where="Театр Geneza Art, 19:00"
+          priceStart="20"
+          priceEnd="50"
+        />
       </slide>
-      <slide>
-        <img class="slide-img" src="./../../assets/img/slide5.jpg" alt="" />
+      <slide class="flex justify-center">
+        <PiletonSlide
+          imgName="slide5.jpg"
+          when="28-29 Ноября"
+          where="Театр Geneza Art, 19:00"
+          priceStart="20"
+          priceEnd="50"
+        />
       </slide>
-      <slide>
-        <img class="slide-img" src="./../../assets/img/slide6.jpg" alt="" />
+      <slide class="flex justify-center">
+        <PiletonSlide
+          imgName="slide6.jpg"
+          when="28-29 Ноября"
+          where="Театр Geneza Art, 19:00"
+          priceStart="20"
+          priceEnd="50"
+        />
       </slide>
     </carousel>
   </div>
@@ -32,24 +61,26 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel'
+import PiletonSlide from './PiletonSlide'
 
 export default {
   components: {
     Carousel,
+    PiletonSlide,
     Slide,
   },
 }
 </script>
 
 <style>
-.carousel img {
+/* .carousel img {
   margin: 0 auto;
-}
-.VueCarousel-pagination > div,
+} */
+/* .VueCarousel-pagination > div,
 .carousel button:not(.VueCarousel-dot) {
   margin: 0 !important;
   padding: 0 !important;
-}
+} */
 
 button.VueCarousel-navigation-button {
   font-size: 30px !important;

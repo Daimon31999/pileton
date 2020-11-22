@@ -1,7 +1,8 @@
 <template>
   <div class="my-10">
+    <!-- class="card-wrapper mx-1 border border-pileton-blue border-b-0 bg-gray-100 flex flex-col" -->
     <div
-      class="card-wrapper mx-1 border border-pileton-blue border-b-0 bg-gray-100 flex flex-col"
+      class="card-wrapper mx-1 border border-gray-300 border-b-0 bg-gray-100 flex flex-col"
     >
       <img :src="image" class="card-image h-80" alt="" />
       <div class="content px-4">
@@ -18,7 +19,7 @@
           <span>{{ cost }}</span>
         </div>
         <button
-          class="buy-ticket mb-2 bg-success w-full border rounded text-white mt-6
+          class="buy-ticket py-1 mb-2 bg-success w-full border rounded text-white mt-6
         hover:bg-pileton-blue transition-colors duration-300 mx-auto
         "
         >
@@ -49,13 +50,13 @@ export default {
       circle,
       transparent,
       transparent 50%,
-      #2d8df0 65%,
+      #ccd5e0 65%,
       #f7fafc 0%,
       #f7fafc 100%
     )
     1px 0px / 20px 26px repeat-x;
-  border-right: 1px solid #2d8df0;
-  border-left: 1px solid #2d8df0;
+  border-right: 1px solid #ccd5e0;
+  border-left: 1px solid #ccd5e0;
 }
 
 .card-image {
